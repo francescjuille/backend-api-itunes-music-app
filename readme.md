@@ -1,8 +1,8 @@
 ### Api for get Itunes artists albums filtred and manage interaction with user
 This is a Nodejs API using Express Framework, it interacts with Itunes API, for get 
 data about music artists, albums etc.
-The goal of this api es to provide to client the albums data of an artist. The main client is a Vue 3 app that is
-in this repo:
+The goal of this api es to provide to client the albums data of an artist. The main client is a Vuejs 3 app that is
+in this repo: https://github.com/francescjuille/frontend-itunes-music-app.git
 
 
 ## Endpoints:
