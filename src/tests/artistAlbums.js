@@ -23,6 +23,19 @@ describe("POST /api/artist-data/get-albums-by-artist-name", () => {
                 response.body.should.have.nested.property('data.albums[0].artistName').to.contain.oneOf(['Jack Johnson']);
             done();
            })
-    })
+    });
+
+    it("it should get an 400 error", (done) => {
+        const body = {
+            incorrectAtribute: "incorrect"
+        }
+        chai.request(server)
+           .post("/api/artist-data/get-albums-by-artist-name")
+           .send(body)
+           .end((err,response) => {
+                response.should.have.status(400);
+            done();
+           })
+    });
 
 })
