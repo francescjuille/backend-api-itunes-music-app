@@ -34,7 +34,8 @@ module.exports = {
                     collectionName: track.collectionName,
                     artistName: track.artistName,
                     collectionPrice: track.collectionPrice,
-                    collectionImage: track.artworkUrl100
+                    collectionImage: track.artworkUrl100,
+                    collectionId: track.collectionId
                 }
                 albumsData.push(albumInfoObject);
             }

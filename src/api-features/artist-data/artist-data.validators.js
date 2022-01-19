@@ -4,7 +4,7 @@ module.exports = {
 
     validate_artist_name() {
         return [
-            body('artistName', 'password is invalid').exists().notEmpty().escape(),
+            body('artistName', 'artistName is invalid').exists().notEmpty().escape(),
         ]
     },
 
