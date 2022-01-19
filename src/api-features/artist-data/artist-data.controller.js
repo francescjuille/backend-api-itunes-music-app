@@ -2,11 +2,6 @@ const artistDataService = require("./artist-data.service");
 const Utils = require('../../common/utils')
 module.exports = {
 
-     ping(req, res) {
-         console.log("body:")
-         console.log(req.body)
-         return res.send("ping resolved")
-     },
 
      async getAlbumsByArtistName(req, res) {
         console.log("createNewUser call")

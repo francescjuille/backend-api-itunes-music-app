@@ -25,7 +25,7 @@ describe("POST /api/artist-data/get-albums-by-artist-name", () => {
            })
     });
 
-    it("it should get an 400 error", (done) => {
+    it("it should get an 400 error when data is invalid", (done) => {
         const body = {
             incorrectAtribute: "incorrect"
         }
