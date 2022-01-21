@@ -10,8 +10,9 @@ chai.use(chaiHttp);
 describe("POST /api/artist-data/get-albums-by-artist-name", () => {
     it("it should get all artist related albuns", (done) => {
         const body = {
-            artistName: "Jack Johnson"
+            artistName: "The Beatles"
         }
+
         chai.request(server)
            .post("/api/artist-data/get-albums-by-artist-name")
            .send(body)
@@ -20,7 +21,7 @@ describe("POST /api/artist-data/get-albums-by-artist-name", () => {
                 response.body.should.be.a('object');
                 response.body.should.have.property('data');
                 response.body.should.have.nested.property('data.albums').to.have.lengthOf.above(1);
-                response.body.should.have.nested.property('data.albums[0].artistName').to.contain.oneOf(['Jack Johnson']);
+                response.body.should.have.nested.property('data.albums[0].collectionName').to.contain.oneOf(['The Beatles']);
             done();
            })
     });
